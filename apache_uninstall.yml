@@ -17,8 +17,3 @@
 
     - name: start firewalld
       command: systemctl start firewalld.service
-
-    - name: open 80
-      command: firewall-cmd --zone=public --add-service=http --permanent
-
-
