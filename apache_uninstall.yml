@@ -1,0 +1,24 @@
+---
+- hosts: all
+  remote_user: ansible
+#  become: yes
+#  become_method: sudo
+
+  tasks:
+    - name: www directory delete
+      file: 
+          state: absent
+          path: /var/www/html/
+
+    - name: uninstall apache
+      yum:
+        name: httpd
+        state: absent
+
+    - name: start firewalld
+      command: systemctl start firewalld.service
+
+    - name: open 80
+      command: firewall-cmd --zone=public --add-service=http --permanent
+
+
