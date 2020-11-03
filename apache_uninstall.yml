@@ -5,11 +5,6 @@
 #  become_method: sudo
 
   tasks:
-    - name: www directory delete
-      file: 
-          state: absent
-          path: /var/www/html/
-
     - name: uninstall apache
       yum:
         name: httpd
