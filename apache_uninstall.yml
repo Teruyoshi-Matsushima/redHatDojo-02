@@ -5,6 +5,12 @@
 #  become_method: sudo
 
   tasks:
+
+    - name: httpd is stopped
+      service:
+        name: httpd
+        state: stopped
+
     - name: uninstall apache
       yum:
         name: httpd
