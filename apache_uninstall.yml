@@ -9,9 +9,3 @@
       yum:
         name: httpd
         state: absent
-
-  tasks:
-    - name: remove files
-      file: 
-        path: /var/www/html
-        state: absent
