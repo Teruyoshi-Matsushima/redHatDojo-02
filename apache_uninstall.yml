@@ -11,6 +11,11 @@
         name: httpd
         state: stopped
 
+    - name: file delete
+      file:
+        path: /var/www/html/
+        state: absent
+
     - name: uninstall apache
       yum:
         name: httpd
