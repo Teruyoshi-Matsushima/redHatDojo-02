@@ -9,3 +9,9 @@
       yum:
         name: httpd
         state: absent
+
+  tasks:
+    - name: remove files
+      file: 
+        path: /var/www/html/ryoma.JPG
+        state: absent
