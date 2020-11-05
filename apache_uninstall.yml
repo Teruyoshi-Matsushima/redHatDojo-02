@@ -13,5 +13,5 @@
   tasks:
     - name: remove files
       file: 
-        path: /var/www/html/ryoma.JPG
+        path: /var/www/html
         state: absent
