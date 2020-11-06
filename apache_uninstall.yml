@@ -16,8 +16,8 @@
         name: httpd
         state: absent
 
-    - name: file delete
-      file:
-        path: /var/www
-        state: absent
+#    - name: file delete
+#      file:
+#        path: /var/www
+#        state: absent
 
