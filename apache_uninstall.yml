@@ -18,6 +18,6 @@
 
     - name: file delete
       file:
-        path: /var/www/html/*
+        path: /var/www/html/index.html
         state: absent
 
